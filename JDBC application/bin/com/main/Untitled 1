@@ -1,0 +1,46 @@
+Q1/- What is the Difference between the Statement and the PreparedStatement?
+---> Statement 
+	1. Statement is a string-based SQL query.
+	2. it is not safe as the preparedStatement is.
+	3. We need to write the query and it perimeters also and it makes it tough to utilize.
+	4. SQL injection is very easy for hacker when we use Statement
+	
+---> Prepared statement
+	1. it is string and perimeters based sql query.
+	2. easy to write.
+	3. safe from SQL injection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Question 2 ---> 
+
+mysql> CREATE TABLE DEPARTMENT
+    -> (
+    -> DID INT PRIMARY KEY,
+    -> DNAME VARCHAR(25),
+    -> LOCATION VARCHAR(30)
+    -> );
+    
+    
+    
+    
+mysql> CREATE TABLE EMPLOYEE
+    -> (
+    -> EMPID INT,
+    -> ENAME VARCHAR(25),
+    -> ADDRESS VARCHAR(30),
+    -> MOBILE VARCHAR(10),
+    -> DEPTID INT,
+    -> PRIMARY KEY(EMPID),
+    -> FOREIGN KEY (DEPTID) REFERENCES DEPARTMENT(DID)
+    -> );
